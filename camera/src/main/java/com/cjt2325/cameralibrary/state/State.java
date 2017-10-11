@@ -27,6 +27,8 @@ public interface State {
 
     void capture();
 
+    void continuousCapture();
+
     void record(Surface surface, float screenProp);
 
     void stopRecord(boolean isShort, long time);

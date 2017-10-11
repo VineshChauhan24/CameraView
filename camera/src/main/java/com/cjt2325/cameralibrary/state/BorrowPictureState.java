@@ -55,6 +55,11 @@ public class BorrowPictureState implements State {
     }
 
     @Override
+    public void continuousCapture() {
+
+    }
+
+    @Override
     public void record(Surface surface,float screenProp) {
 
     }

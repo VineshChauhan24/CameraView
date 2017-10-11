@@ -17,7 +17,9 @@ public interface CameraView {
 
     void showPicture(Bitmap bitmap, boolean isVertical);
 
-    void playVideo(Bitmap firstFrame, String url);
+    void continuousCapture(Bitmap bitmap);
+
+    void playVideo(Bitmap firstFrame, String url, long time);
 
     void stopVideo();
 

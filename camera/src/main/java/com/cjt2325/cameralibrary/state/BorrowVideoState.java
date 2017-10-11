@@ -56,6 +56,11 @@ public class BorrowVideoState implements State {
     }
 
     @Override
+    public void continuousCapture() {
+
+    }
+
+    @Override
     public void record(Surface surface, float screenProp) {
 
     }
