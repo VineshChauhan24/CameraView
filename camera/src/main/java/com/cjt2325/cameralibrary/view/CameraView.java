@@ -19,6 +19,8 @@ public interface CameraView {
 
     void continuousCapture(Bitmap bitmap);
 
+    void continuousRecorder(Bitmap firstFrame, String url, long time);
+
     void playVideo(Bitmap firstFrame, String url, long time);
 
     void stopVideo();

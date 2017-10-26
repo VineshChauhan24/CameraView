@@ -101,6 +101,7 @@ public class CameraMachine implements State {
         state.continuousCapture();
     }
 
+
     @Override
     public void record(Surface surface, float screenProp) {
         state.record(surface, screenProp);
@@ -109,6 +110,11 @@ public class CameraMachine implements State {
     @Override
     public void stopRecord(boolean isShort, long time) {
         state.stopRecord(isShort, time);
+    }
+
+    @Override
+    public void continuousStopRecord(boolean isShort, long time) {
+        state.continuousStopRecord(isShort, time);
     }
 
     @Override

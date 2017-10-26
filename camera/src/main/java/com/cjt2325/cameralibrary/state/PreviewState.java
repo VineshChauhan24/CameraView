@@ -99,6 +99,20 @@ class PreviewState implements State {
     }
 
     @Override
+    public void continuousStopRecord(final boolean isShort, final long time) {
+        CameraInterface.getInstance().stopRecord(isShort, new CameraInterface.StopRecordCallback() {
+            @Override
+            public void recordResult(String url, Bitmap firstFrame) {
+                if (isShort) {
+                    machine.getView().resetState(JCameraView.TYPE_SHORT);
+                } else {
+                    machine.getView().continuousRecorder(firstFrame, url, time);
+                }
+            }
+        });
+    }
+
+    @Override
     public void cancle(SurfaceHolder holder, float screenProp) {
         LogUtil.i("浏览状态下,没有 cancle 事件");
     }

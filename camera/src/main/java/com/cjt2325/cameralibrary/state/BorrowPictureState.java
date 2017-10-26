@@ -60,12 +60,17 @@ public class BorrowPictureState implements State {
     }
 
     @Override
-    public void record(Surface surface,float screenProp) {
+    public void record(Surface surface, float screenProp) {
 
     }
 
     @Override
     public void stopRecord(boolean isShort, long time) {
+    }
+
+    @Override
+    public void continuousStopRecord(boolean isShort, long time) {
+
     }
 
     @Override
